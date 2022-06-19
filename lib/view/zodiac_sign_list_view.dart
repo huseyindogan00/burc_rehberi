@@ -15,7 +15,8 @@ class ZodiacSignListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Burçlar Listesi'),
+        title: Text('BURÇ REHBERİ', style: Theme.of(context).textTheme.headline5),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: ListView.builder(
