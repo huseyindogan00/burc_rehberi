@@ -27,7 +27,7 @@ class _ZodiacSignDetailViewState extends State<ZodiacSignDetailView> {
 
     setState(() {
       appbarColor = _generator.dominantColor!.color;
-      textColorBody = _generator.darkMutedColor!.color;
+      textColorBody = _generator.darkVibrantColor!.color;
     });
   }
 
@@ -42,7 +42,10 @@ class _ZodiacSignDetailViewState extends State<ZodiacSignDetailView> {
             backgroundColor: appbarColor,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.asset('assets/images/${widget.zodiacSign.bigPicture}', fit: BoxFit.cover),
-              title: Text('${widget.zodiacSign.name} Burcu ve Özellikleri'),
+              title: Text(
+                '${widget.zodiacSign.name.toUpperCase()} BURCU VE ÖZELLİKLERİ',
+                style: TextStyle(color: Colors.white),
+              ),
               centerTitle: true,
             ),
           ),
