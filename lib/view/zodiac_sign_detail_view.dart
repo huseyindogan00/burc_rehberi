@@ -13,6 +13,7 @@ class ZodiacSignDetailView extends StatefulWidget {
 class _ZodiacSignDetailViewState extends State<ZodiacSignDetailView> {
   Color appbarColor = Colors.transparent;
   late PaletteGenerator _generator;
+  Color textColorBody = Colors.black;
 
   @override
   void initState() {
@@ -26,6 +27,7 @@ class _ZodiacSignDetailViewState extends State<ZodiacSignDetailView> {
 
     setState(() {
       appbarColor = _generator.dominantColor!.color;
+      textColorBody = _generator.darkMutedColor!.color;
     });
   }
 
@@ -51,7 +53,7 @@ class _ZodiacSignDetailViewState extends State<ZodiacSignDetailView> {
             child: SingleChildScrollView(
               child: Text(
                 widget.zodiacSign.detail,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: TextStyle(fontSize: 20, color: textColorBody),
               ),
             ),
           )),
